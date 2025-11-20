@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket  = "infra-test-gkec"
+    bucket  = "terraform-state-sto"
     prefix  = "terraform/state"
   }
 }
