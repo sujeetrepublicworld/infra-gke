@@ -23,6 +23,9 @@ jobs:
         run: |
           echo $GOOGLE_APPLICATION_CREDENTIALS
           gcloud auth list
+      - name: Debug secret
+        run: |
+          echo "${{ secrets.GCP_SA_KEY }}" | head -n 5
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
