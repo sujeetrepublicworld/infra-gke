@@ -12,11 +12,11 @@ resource "google_container_cluster" "gke" {
   # Control access and security
   master_authorized_networks_config {
     cidr_blocks {
-      cidr_block   = "0.0.0.0/0"
+      cidr_block   = "10.0.0.0/24"
       display_name = "Allow from anywhere"
     }
   }
-
+ 
   # Enable autoscaling for the cluster
   cluster_autoscaling {
     enabled = true
