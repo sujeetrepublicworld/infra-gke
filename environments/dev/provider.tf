@@ -9,7 +9,6 @@ terraform {
   backend "gcs" {
     bucket  = "infra-test-gkec"
     prefix  = "terraform/state"
-    project = var.project_id   # ✅ Optional, can use variable
   }
 }
 
