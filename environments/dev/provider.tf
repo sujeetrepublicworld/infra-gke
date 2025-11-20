@@ -6,6 +6,12 @@ terraform {
       version = "7.12.0"
     }
   }
+
+  backend "gcs" {
+    bucket  = "infra-test-gkec"
+    prefix  = "terraform/state"
+    project = "dev-test-371111"
+  }
 }
 
 
