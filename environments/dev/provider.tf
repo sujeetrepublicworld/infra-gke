@@ -1,4 +1,3 @@
-# backend.tf
 terraform {
   required_providers {
     google = {
@@ -10,13 +9,12 @@ terraform {
   backend "gcs" {
     bucket  = "infra-test-gkec"
     prefix  = "terraform/state"
-    project = "dev-test-371111"
+    project = var.project_id   # ✅ Optional, can use variable
   }
 }
 
 
 provider "google" {
-  credentials = file("/home/tech25/.config/gcloud/application_default_credentials.json")
   project     = var.project_id
   region      = var.region
 }
