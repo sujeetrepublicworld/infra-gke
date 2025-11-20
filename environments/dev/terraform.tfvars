@@ -1,5 +1,6 @@
 # terraform.tfvars
 region = "asia-south1"
+environment = "dev"
 # GCP Project ID
 project_id = "dev-test-371111"
 vpc_name   = "test-vpc-dev"
