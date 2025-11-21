@@ -11,11 +11,14 @@ resource "google_container_cluster" "gke" {
 
   # Control access and security
   master_authorized_networks_config {
-    cidr_blocks {
-      cidr_block   = "34.58.200.168/32"
-      display_name = "Allow from anywhere"
-    }
+  gcp_public_cidrs_access_enabled = false
+
+  cidr_blocks {
+    cidr_block   = "34.58.200.168/32"
+    display_name = "Bastion Host"
   }
+}
+
  
   # Enable autoscaling for the cluster
   cluster_autoscaling {
