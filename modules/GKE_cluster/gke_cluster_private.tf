@@ -6,7 +6,7 @@ resource "google_container_cluster" "gke" {
   # Enable private cluster setup
   private_cluster_config {
     enable_private_nodes    = true
-    enable_private_endpoint = true
+    enable_private_endpoint = false
   }
 
   # Control access and security
@@ -14,8 +14,8 @@ resource "google_container_cluster" "gke" {
   gcp_public_cidrs_access_enabled = false
 
   cidr_blocks {
-    cidr_block   = "10.128.0.3/32"
-    display_name = "Bastion Host"
+    cidr_block   = "0.0.0.0/0"
+    display_name = "public access"
   }
 }
 
