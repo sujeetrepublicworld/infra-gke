@@ -58,7 +58,7 @@ firewall_rules = {
 # Additional variables for GKE Cluster or VM pools can be defined here
 node_pool_config = {
   machine_type = "e2-medium"
-  node_count   = 3
+  node_count   = 2
 }
 
 gke_version = "1.21.5-gke.1302"

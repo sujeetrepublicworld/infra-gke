@@ -26,12 +26,12 @@ resource "google_container_cluster" "gke" {
 
     resource_limits {
       resource_type = "cpu"
-      minimum       = 2
+      minimum       = 1
       maximum       = 10
     }
     resource_limits {
       resource_type = "memory"
-      minimum       = 4
+      minimum       = 1
       maximum       = 10
     }
   }
@@ -47,7 +47,7 @@ resource "google_container_cluster" "gke" {
 
     # Enable autoscaler for the node pool
     autoscaling {
-      min_node_count = 3
+      min_node_count = 2
       max_node_count = 10
     }
   }
