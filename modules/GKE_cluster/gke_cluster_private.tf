@@ -14,7 +14,7 @@ resource "google_container_cluster" "gke" {
   gcp_public_cidrs_access_enabled = false
 
   cidr_blocks {
-    cidr_block   = "34.58.200.168/32"
+    cidr_block   = "10.128.0.3/32"
     display_name = "Bastion Host"
   }
 }
